@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-        <header>
-            <div>
-                <img id="logo" data-content="home">
-            </div>
-            <div>
-                <h1 id="site-name">Andrew Michael Potter</h1>
-                <p id="random-tidbit">randomtidbitplaceholdertext</p>
-            </div>
-            <nav id="main-nav">
-                <div id="icons-and-tabs">
-                    <ul>
-                        <li class="tab" data-content="projects">Projects</li>
-                        <li class="tab" data-content="about">About</li>
-                        <li><a href="http://github.com/AMPotter" target="blank">GitHub</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <section id="home-tab" data-content="tab-content">
-                <header>
-                    <h1>Welcome!</h1>
-                </header>
-                <main>
-                    <h2>This portfolio was started during Code Fellows PDX's 301 course.</h2>
-                    <p>Please feel free to poke around this site and check out some of the coding projects I've worked on.</p>
-                </main>
-            </section>
-            <section id="about-tab" data-content="tab-content">
-                <header>
-                    <h1>About Me</h1>
-                </header>
-                <main>
-                    <p>I'm a cool kid, and this is placeholder text.</p>
-                </main>
-            </section>
 
-        </main>
-        <footer>
-            <p>Andrew Michael Potter, Code Fellows PDX 2017</p>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-        <script src="scripts/app.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" data-content="home">
+        </div>
+        <div>
+            <h1 id="site-name">Andrew Michael Potter</h1>
+            <p id="random-tidbit">randomtidbitplaceholdertext</p>
+        </div>
+        <nav id="main-nav">
+            <div id="icons-and-tabs">
+                <ul>
+                    <li class="tab" data-content="projects"><a href="#" class="icon-projects">Projects</a></li>
+                    <li class="tab" data-content="about"><a href="#" class="icon-address-book">About</a></li>
+                    <li><a href="http://github.com/AMPotter" target="blank">GitHub</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home-tab" class="tab-content">
+            <header>
+                <h1>Welcome!</h1>
+            </header>
+            <main>
+                <h2>This portfolio was started during Code Fellows PDX's 301 course.</h2>
+                <p>Please feel free to poke around this site and check out some of the coding projects I've worked on.</p>
+            </main>
+        </section>
+        <section id="projects" class="tab-content">
+            <article class="template">
+                <header>
+                    <h1>Project Title</h1>
+                </header>
+                <section class="project-blurb"></section>
+                <a href="#" class="repo-link">Go To Repo</a>
+            </article>
+        </section>
+        <section id="about" class="tab-content">
+            <header>
+                <h1>About Me</h1>
+            </header>
+            <main>
+                <p>I'm a cool kid, and this is placeholder text.</p>
+            </main>
+        </section>
+
+    </main>
+    <footer>
+        <p>Andrew Michael Potter, Code Fellows PDX 2017</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <script src="scripts/projectEntries.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/projectView.js"></script>
+</body>
+
 </html>
