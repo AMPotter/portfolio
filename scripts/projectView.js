@@ -7,6 +7,7 @@ projectView.handleMainNav = function () {
         $('.tab-content').hide();
         var clickedTab = $(this).parent().data('content');
         $('#' + clickedTab).show();
+        $('#icons-and-tabs ul').hide();
     });
     $('.main-nav .tab:first').click();
 };
