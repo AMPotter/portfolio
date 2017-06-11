@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script id="project-template" type="text/x-handlebars-template">
+        <article class="template">
+            <header>
+                <h1 class="project-title">{{title}}</h1>
+            </header>
+            <img src="{{img}}" class="project-image">
+            <section class="project-blurb">{{{projectBlurb}}}</section>
+            <a href="{{projectUrl}}" class="repo-link">Go To Repo</a>
+        </article>
+    </script>
 </head>
 
 <body>
@@ -39,14 +49,14 @@
             </main>
         </section>
         <section id="projects" class="tab-content">
-            <article class="template">
+            <!--<article class="template">
                 <header>
-                    <h1 class="project-title">Project Title</h1>
+                    <h1 class="project-title">{{title}}</h1>
                 </header>
-                <img class="project-image">
-                <section class="project-blurb"></section>
-                <a href="#" class="repo-link">Go To Repo</a>
-            </article>
+                <img src="{{img}}" class="project-image">
+                <section class="project-blurb">{{projectBlurb}}</section>
+                <a href="{{projectUrl}}" class="repo-link">Go To Repo</a>
+            </article>-->
         </section>
         <section id="about" class="tab-content">
             <header>

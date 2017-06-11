@@ -11,6 +11,12 @@ projectView.handleMainNav = function () {
     $('.main-nav .tab:first').click();
 };
 
+projectView.initIndex = function () {
+    $('.tab-content').hide();
+    $('#home-tab').show();
+};
+
 $(document).ready(function () {
+    projectView.initIndex();
     projectView.handleMainNav();
 });
