@@ -16,7 +16,15 @@ projectView.initIndex = function () {
     $('#home-tab').show();
 };
 
+projectView.menuToggle = function () {
+    $('#icons-and-tabs ul').hide();
+    $('.icon-menu').on('click', function () {
+        $('#icons-and-tabs ul').toggle();
+    });
+};
+
 $(document).ready(function () {
+    projectView.menuToggle();
     projectView.initIndex();
     projectView.handleMainNav();
 });
