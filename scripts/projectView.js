@@ -7,10 +7,25 @@ projectView.handleMainNav = function () {
         $('.tab-content').hide();
         var clickedTab = $(this).parent().data('content');
         $('#' + clickedTab).show();
+        $('#icons-and-tabs ul').hide();
     });
     $('.main-nav .tab:first').click();
 };
 
+projectView.initIndex = function () {
+    $('.tab-content').hide();
+    $('#home-tab').show();
+};
+
+projectView.menuToggle = function () {
+    $('#icons-and-tabs ul').hide();
+    $('.icon-menu').on('click', function () {
+        $('#icons-and-tabs ul').toggle();
+    });
+};
+
 $(document).ready(function () {
+    projectView.menuToggle();
+    projectView.initIndex();
     projectView.handleMainNav();
 });
