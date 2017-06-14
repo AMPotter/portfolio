@@ -1,0 +1,20 @@
+[
+    {
+        "title":"Project One",
+        "img":"/images/this.png",
+        "projectUrl":"http://twitter.com/",
+        "projectBlurb":"<p>This is the first project.</p>"
+    },
+    {
+        "title":"Project Two",
+        "img":"/images/that.png",
+        "projectUrl":"http://youtube.com/",
+        "projectBlurb":"<p>Thisis the second project.</p>"
+    },
+    {
+        "title":"Project Three",
+        "img":"/images/hey.jpg",
+        "projectUrl":"http://facebook.com/",
+        "projectBlurb":"<p>This is the third project.</p>"
+    }
+]
