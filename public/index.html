@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/modules.css">
+    
     <script id="project-template" type="text/x-handlebars-template">
         <article class="template">
             <header>
@@ -74,9 +78,11 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-    <script src="scripts/projectEntries.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>
+    <script>
+        Project.fetchAll();
+    </script>
 </body>
 
 </html>
