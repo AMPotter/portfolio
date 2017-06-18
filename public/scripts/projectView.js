@@ -10,27 +10,12 @@ projectView.handleMainNav = function () {
   $('.main-nav .tab:first').click();
 };
 
-// projectView.initIndexPage = function () {
-//   $('.tab-content').hide();
-//   $('#home-tab').show();
-//   $('#project-json').on('focus', function(){
-//     this.select();
-
-//   });
-// };
-
 projectView.menuToggle = function () {
   $('#icons-and-tabs ul').hide();
   $('.icon-menu').on('click', function () {
     $('#icons-and-tabs ul').toggle();
   })
 };
-
-// $(document).ready(function () {
-//   projectView.menuToggle();
-//   projectView.initIndexPage();
-//   projectView.handleMainNav();
-// });
 
 projectView.initIndexPage = function() {
   Project.all.forEach(function(project) {
