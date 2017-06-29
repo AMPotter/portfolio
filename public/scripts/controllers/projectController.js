@@ -5,8 +5,8 @@
 
   projectController.init = () => {
     app.projectView.initIndexPage();
-    $('main > section').hide();
-    $('#home-tab').show();
+    // $('main > section').hide();
+    // $('#home-tab').show();
   }
   
   module.projectController = projectController;

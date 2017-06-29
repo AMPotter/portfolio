@@ -4,13 +4,13 @@ var app = app || {};
 (function (module) {
   const projectView = {};
 
-  projectView.handleMainNav = function () {
-    $('.main-nav').on('click', '.tab', function() {
-      $('.tab-content').hide();
-      $(`#${$(this).data('content')}`).fadeIn();
-    });
-    $('.main-nav .tab:first').click();
-  };
+  // projectView.handleMainNav = function () {
+  //   $('#main-nav').on('click', '.tab', function() {
+  //     $('.tab-content').hide();
+  //     $(`#${$(this).data('content')}`).fadeIn();
+  //   });
+  //   $('#main-nav .tab:first').click();
+  // };
 
   projectView.menuToggle = function () {
     $('#icons-and-tabs ul').hide();
@@ -20,11 +20,13 @@ var app = app || {};
   };
 
   projectView.initIndexPage = function() {
-    Project.all.forEach(function(project) {
+    app.Project.all.forEach(function(project) {
       $('#projects').append(project.toHtml());
     });
+  
+    $('.tab-content').hide();
+    $('#projects').show();
 
-    projectView.handleMainNav();
   }
 
   module.projectView = projectView;
