@@ -9,6 +9,6 @@
     // $('main > section').hide();
     // $('#home-tab').show();
   }
-  
+
   module.projectController = projectController;
 })(app);

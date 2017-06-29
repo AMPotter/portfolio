@@ -23,7 +23,7 @@ var app = app || {};
     app.Project.all.forEach(function(project) {
       $('#projects').append(project.toHtml());
     });
-  
+
     $('.tab-content').hide();
     $('#projects').show();
 
