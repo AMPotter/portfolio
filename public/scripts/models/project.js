@@ -22,8 +22,7 @@ var app = app || {};
 
   Project.fetchAll = function() {
     $.get('github/user/repos')
-      .then(data => Project.loadAll(data), err => console.error(err)) // es6 syntax arrow functions
-      // .then(callback);
+      .then(data => Project.loadAll(data), err => console.error(err))
   }
 
   module.Project = Project;
