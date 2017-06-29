@@ -3,13 +3,11 @@ var app = app || {};
 
 (function (module) {
   function Project(rawDataObj) {
-    this.title = rawDataObj.title;
-    this.img = rawDataObj.img;
-    this.projectUrl = rawDataObj.projectUrl;
-    this.projectBlurb = rawDataObj.projectBlurb;
+    Object.keys(rawDataObj).forEach(key => this[key] = rawDataObj[key]);
   }
 
   Project.all = [];
+
 
   Project.prototype.toHtml = function() {
     let template = Handlebars.compile($('#project-template').html());
@@ -23,19 +21,9 @@ var app = app || {};
   }
 
   Project.fetchAll = function() {
-    if (localStorage.rawData) {
-      Project.loadAll(JSON.parse(localStorage.rawData));
-      projectView.initIndexPage();
-    } else {
-      $.getJSON('/data/projectData.json')
-        .then(function(rawData) {
-          Project.loadAll(rawData);
-          localStorage.rawData = JSON.stringify(rawData);
-          projectView.initIndexPage();
-        }, function(err) {
-          console.error(err);
-        });
-    }
+    $.get('github/user/repos')
+      .then(data => Project.loadAll(data), err => console.error(err)) // es6 syntax arrow functions
+      // .then(callback);
   }
 
   module.Project = Project;
