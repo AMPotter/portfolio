@@ -14,11 +14,10 @@
     <script id="project-template" type="text/x-handlebars-template">
         <article class="template">
             <header>
-                <h1 class="project-title">{{title}}</h1>
+                <h1 class="project-title">{{name}}</h1>
             </header>
-            <img src="{{img}}" class="project-image">
-            <section class="project-blurb">{{{projectBlurb}}}</section>
-            <a href="{{projectUrl}}" class="repo-link">Go To Repo</a>
+            <section class="project-blurb">{{description}}</section>
+            <a href="{{html_url}}" class="repo-link" target="_blank">Go To Repo</a>
         </article>
     </script>
 </head>
@@ -54,14 +53,13 @@
             </main>
         </section>
         <section id="projects" class="tab-content">
-            <article class="template">
+            <!--<article class="template">
                 <header>
-                    <h1 class="project-title">{{title}}</h1>
+                    <h1 class="project-title">{{name}}</h1>
                 </header>
-                <img src="{{img}}" class="project-image">
-                <section class="project-blurb">{{projectBlurb}}</section>
-                <a href="{{projectUrl}}" class="repo-link">Go To Repo</a>
-            </article>
+                <section class="project-blurb">{{description}}</section>
+                <a href="{{html_url}}" class="repo-link" target="_blank">Go To Repo</a>
+            </article>-->
         </section>
         <section id="about" class="tab-content">
             <header>
